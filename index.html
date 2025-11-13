@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Subliarte DC — Personaliza tus ideas | Pedidos por WhatsApp</title>
+  <meta name="description" content="Subliarte DC — Sublimación y personalización en León y San Francisco del Rincón. Playeras, tazas, gorras y más. Pide vía WhatsApp fácilmente." />
+  <link rel="icon" href="imagenes/favicon.png" />
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="imagenes/logo.jfif" alt="Logo Subliarte DC" class="logo" width="80" height="80">
+        <div>
+          <h1 class="site-title">Subliarte DC</h1>
+          <p class="site-sub">Personaliza tus ideas ✨</p>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes-somos">Quiénes Somos</a>
+        <a href="#productos">Productos</a>
+        <a href="#pedidos">Pedidos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2 id="hero-title">Convierte tus ideas en productos únicos</h2>
+          <p>Playeras, tazas, gorras, cojines y más — acabados profesionales y entrega rápida.</p>
+          <a href="#pedidos" class="btn btn-primary">Haz tu pedido</a>
+        </div>
+        <figure class="hero-image" aria-hidden="true">
+          <img src="imagenes/sublimables.jpg" alt="Ejemplos de productos sublimados"class="img-sublimables" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section id="quienes-somos" class="section mvv" aria-labelledby="mvv-title">
+      <div class="container">
+        <h2 id="mvv-title">¿Quiénes somos?</h2>
+        <p class="lead">En Subliarte DC transformamos tus ideas en productos memorables con técnicas profesionales de sublimación.</p>
+
+        <div class="mvv-grid">
+          <article class="mvv-item" aria-labelledby="mision-title">
+            <h3 id="mision-title">Misión</h3>
+            <p>Ofrecer soluciones de personalización de alta calidad con entrega puntual y atención cercana.</p>
+          </article>
+
+          <article class="mvv-item" aria-labelledby="vision-title">
+            <h3 id="vision-title">Visión</h3>
+            <p>Ser referencia en México por creatividad, rapidez y excelencia en personalización.</p>
+          </article>
+
+          <article class="mvv-item" aria-labelledby="valores-title">
+            <h3 id="valores-title">Valores</h3>
+            <ul>
+              <li>Creatividad</li>
+              <li>Calidad</li>
+              <li>Responsabilidad</li>
+              <li>Pasión</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="section productos" aria-labelledby="productos-title">
+      <div class="container">
+        <h2 id="productos-title">Algunos de nuestros productos</h2>
+
+        <div class="carousel-wrapper" aria-roledescription="carousel">
+          <button class="carousel-button prev" aria-label="Anterior">❮</button>
+          <div class="carousel-container" id="productCarousel">
+            <!-- Ajusta las rutas de las imágenes; usar .webp o .jpg -->
+            <img class="carousel-item" src="imagenes/taza.jfif" alt="Taza personalizada blanca con impresión" loading="lazy">
+            <img class="carousel-item" src="imagenes/playera.jfif" alt="Playera sublimada con diseño colorido" loading="lazy">
+            <img class="carousel-item" src="imagenes/etiquetas.jpg" alt="Etiquetas personalizadas impresas" loading="lazy">
+            <img class="carousel-item" src="imagenes/gorra.jfif" alt="Gorra sublimada con logo" loading="lazy">
+            <img class="carousel-item" src="imagenes/cojin.webp" alt="Cojín personalizado con foto" loading="lazy">
+          </div>
+          <button class="carousel-button next" aria-label="Siguiente">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="pedidos" class="section pedidos" aria-labelledby="pedidos-title">
+      <div class="container small">
+        <h2 id="pedidos-title">Haz tu pedido personalizado</h2>
+        <p class="lead">Selecciona destino, describe tu pedido y nosotros lo enviaremos por WhatsApp al número elegido.</p>
+
+        <form id="pedidoForm" class="form-card" novalidate>
+          <div class="form-row">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+            <span class="input-error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Correo</label>
+            <input id="email" name="email" type="email" placeholder="nombre@ejemplo.com" required>
+            <span class="input-error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="whatsappCliente">Número de WhatsApp (solo números)</label>
+            <input id="whatsappCliente" name="whatsappCliente" type="tel" placeholder="55XXXXXXXX" required inputmode="numeric">
+            <span class="input-error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="producto">Tipo de producto</label>
+            <select id="producto" name="producto" required>
+              <option value="">Selecciona...</option>
+              <option value="Playera">Playera</option>
+              <option value="Taza">Taza</option>
+              <option value="Gorra">Gorra</option>
+              <option value="Cojín">Cojín</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="descripcion">Describe tu pedido</label>
+            <textarea id="descripcion" name="descripcion" rows="4" placeholder="Tallas, colores, texto a imprimir, fecha requerida..." required></textarea>
+            <span class="input-error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="archivo">Subir archivo de diseño (opcional)</label>
+            <input id="archivo" name="archivo" type="file" accept="image/*,application/pdf">
+            <small class="muted">Máx 5 MB. Opcional — si prefieres, puedes enviar por WhatsApp después.</small>
+          </div>
+
+          <div class="form-row">
+            <label for="destino">Enviar pedido a</label>
+            <select id="destino" name="destino" required>
+              <option value="">Selecciona un número</option>
+              <option value="524775767046">📍 SFR (+52 477 576 7046)</option>
+              <option value="524777029185">📍 León (+52 477 702 9185)</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Enviar pedido por WhatsApp</button>
+            <div id="formMessage" role="status" aria-live="polite"></div>
+          </div>
+        </form>
+
+        <p class="small muted">Al enviar, se abrirá WhatsApp con el mensaje ya listo para enviarse al número seleccionado.</p>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contacto" aria-labelledby="contacto-title">
+      <div class="container small">
+        <h2 id="contacto-title">Contáctanos</h2>
+        <ul class="contact-list">
+          <li>📱 WhatsApp SFR: <a href="https://wa.me/524775767046" target="_blank" rel="noopener">+52 477 576 7046</a></li>
+          <li>📱 WhatsApp León: <a href="https://wa.me/524777029185" target="_blank" rel="noopener">+52 477 702 9185</a></li>
+          <li>📧 <a href="mailto:samawolf.3@gmail.com">samawolf.3@gmail.com</a> • <a href="mailto:javiercantero87@gmail.com">javiercantero87@gmail.com</a></li>
+          <li>📍 León, Guanajuato</li>
+        </ul>
+
+        <div class="social">
+          <a class="facebook" href="https://www.facebook.com/share/1BYEy6zwG3/" target="_blank" rel="noopener" aria-label="Facebook Subliarte DC">
+            <img src="imagenes/facebook_logo.jfif" alt="Facebook" width="36" height="36">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Subliarte DC — Diseñado por Mario Nolasco & Javier Cantero</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp quick link (optional) -->
+  <a class="whatsapp-float" href="https://wa.me/525623384115" target="_blank" rel="noopener" aria-label="WhatsApp León">
+    <img src="imagenes/whatsapp_logo.webp" alt="WhatsApp" width="36" height="36">
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
