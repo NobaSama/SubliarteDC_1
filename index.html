@@ -6,7 +6,6 @@
   <title>Subliarte DC — Personaliza tus ideas | Pedidos por WhatsApp</title>
   <meta name="description" content="Subliarte DC — Sublimación y personalización en León y San Francisco del Rincón. Playeras, tazas, gorras y más. Pide vía WhatsApp fácilmente." />
   <link rel="icon" href="imagenes/favicon.png" />
-  <!-- Fuente moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -39,7 +38,7 @@
           <a href="#pedidos" class="btn btn-primary">Haz tu pedido</a>
         </div>
         <figure class="hero-image" aria-hidden="true">
-          <img src="imagenes/sublimables.jpg" alt="Ejemplos de productos sublimados"class="img-sublimables" loading="lazy">
+          <img src="imagenes/sublimables.jpg" alt="Ejemplos de productos sublimados" class="img-sublimables" loading="lazy">
         </figure>
       </div>
     </section>
@@ -80,12 +79,11 @@
         <div class="carousel-wrapper" aria-roledescription="carousel">
           <button class="carousel-button prev" aria-label="Anterior">❮</button>
           <div class="carousel-container" id="productCarousel">
-            <!-- Ajusta las rutas de las imágenes; usar .webp o .jpg -->
             <img class="carousel-item" src="imagenes/taza.jfif" alt="Taza personalizada blanca con impresión" loading="lazy">
             <img class="carousel-item" src="imagenes/playera.jfif" alt="Playera sublimada con diseño colorido" loading="lazy">
             <img class="carousel-item" src="imagenes/etiquetas.jpg" alt="Etiquetas personalizadas impresas" loading="lazy">
             <img class="carousel-item" src="imagenes/gorra.jfif" alt="Gorra sublimada con logo" loading="lazy">
-            <img class="carousel-item" src="imagenes/cojin.webp" alt="Cojín personalizado con foto" loading="lazy">
+            <img class="carousel-item" src="imagenes/cojin.jfif" alt="Cojín personalizado con foto" loading="lazy">
           </div>
           <button class="carousel-button next" aria-label="Siguiente">❯</button>
         </div>
@@ -131,6 +129,11 @@
           <div class="form-row">
             <label for="descripcion">Describe tu pedido</label>
             <textarea id="descripcion" name="descripcion" rows="4" placeholder="Tallas, colores, texto a imprimir, fecha requerida..." required></textarea>
+            
+            <button type="button" id="aiAssistantBtn" class="idea-button">
+                🎨 Obtener ideas de diseño automáticas
+            </button>
+            
             <span class="input-error" aria-live="polite"></span>
           </div>
 
@@ -170,7 +173,7 @@
         </ul>
 
         <div class="social">
-          <a class="facebook" href="https://www.facebook.com/share/1BYEy6zwG3/" target="_blank" rel="noopener" aria-label="Facebook Subliarte DC">
+          <a class="social-link" href="https://www.facebook.com/share/1BYEy6zwG3/" target="_blank" rel="noopener" aria-label="Facebook Subliarte DC">
             <img src="imagenes/facebook_logo.jfif" alt="Facebook" width="36" height="36">
           </a>
         </div>
@@ -184,8 +187,7 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp quick link (optional) -->
-  <a class="whatsapp-float" href="https://wa.me/525623384115" target="_blank" rel="noopener" aria-label="WhatsApp León">
+  <a class="whatsapp-float" href="https://wa.me/524777029185" target="_blank" rel="noopener" aria-label="WhatsApp León">
     <img src="imagenes/whatsapp_logo.webp" alt="WhatsApp" width="36" height="36">
   </a>
 
