@@ -17,7 +17,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, #087bef 0%, #07f9e5 100%);
+  background: linear-gradient(180deg, #e8f4fd 0%, #f0fffe 100%);
   color:#1b1b1b;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -71,7 +71,9 @@ body{
 .hero h2{font-size:2rem;margin:0 0 10px 0;color:var(--accent1)}
 .lead{color:var(--muted);font-size:1rem;margin-bottom:16px}
 .btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;cursor:pointer}
-.btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#0b0b0b;box-shadow:var(--shadow-soft);transition:transform .18s ease,box-shadow .18s ease}
+
+/* CORREGIDO: Color del texto oscuro para mejor contraste */
+.btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#1b1b1b;box-shadow:var(--shadow-soft);transition:transform .18s ease,box-shadow .18s ease}
 .btn-primary:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(36,6,232,0.12)}
 
 /* Sections */
@@ -85,9 +87,9 @@ body{
 
 /* Carousel */
 .carousel-wrapper{position:relative;display:flex;align-items:center;gap:8px}
-.carousel-container{display:flex;overflow:hidden;scroll-behavior:smooth;padding:10px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:var(--shadow-soft)}
+.carousel-container{display:flex;overflow:hidden;scroll-behavior:smooth;padding:20px 10px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:var(--shadow-soft);align-items: center;}
 .carousel-item{min-width:33.333%;flex:0 0 auto;padding:8px}
-.carousel-item img, .carousel-item{display:block;width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.carousel-item{display:block;width:100%;height:auto;max-height: 280px;object-fit:contain;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.06);background: #ffffff;}
 @media(max-width:900px){.carousel-item{min-width:50%}}
 @media(max-width:520px){.carousel-item{min-width:100%}}
 .carousel-button{position:absolute;top:50%;transform:translateY(-50%);border:none;background:rgba(0,0,0,0.5);color:white;padding:10px 12px;border-radius:10px;cursor:pointer;z-index:2}
@@ -96,7 +98,7 @@ body{
 .carousel-button:focus{outline:2px solid rgba(255,255,255,0.12)}
 
 /* Form */
-.form-card{background:linear-gradient(180deg,#24e37d,#fbfdff);padding:20px;border-radius:16px;box-shadow:var(--shadow-soft)}
+.form-card{background:linear-gradient(180deg,#f0fff4,#fbfdff);padding:20px;border-radius:16px;box-shadow:var(--shadow-soft)}
 .form-row{display:flex;flex-direction:column;margin-bottom:12px}
 label{font-weight:600;margin-bottom:6px;font-size:0.95rem}
 input[type="text"], input[type="email"], input[type="tel"], textarea, select, input[type="file"]{
@@ -113,6 +115,15 @@ textarea{resize:vertical;min-height:90px}
 /* Contact */
 .contact-list{list-style:none;padding:0;margin:0}
 .contact-list li{margin-bottom:8px}
+
+.social { margin-top: 20px; }
+.social-link {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+.social-link:hover {
+  transform: scale(1.08);
+}
 
 /* Footer */
 .site-footer{padding:18px 0;text-align:center;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent);color:var(--muted)}
@@ -131,4 +142,228 @@ textarea{resize:vertical;min-height:90px}
   .main-nav{display:flex;gap:8px;flex-wrap:wrap}
   .hero-inner{padding:8px 0}
   
+}
+
+/* --- Estilos para el Asistente de IA (Movidos de <style> en index.html) --- */
+.ai-suggestions {
+    background: var(--glass);
+    padding: 16px;
+    border-radius: var(--radius);
+    margin-top: 12px;
+    border-left: 4px solid var(--accent1);
+    backdrop-filter: blur(10px);
+}
+
+.ai-suggestions strong {
+    color: var(--accent1);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ai-suggestions ul {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+}
+
+.ai-suggestions li {
+    margin-bottom: 6px;
+    padding-left: 8px;
+}
+
+.idea-button {
+    background: transparent;
+    border: 1px dashed var(--accent1);
+    color: var(--accent1);
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.idea-button:hover {
+    background: var(--accent1);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.loading-dots {
+    display: inline-block;
+}
+.loading-dots::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+@keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+}
+/* ============================================
+   CSS PARALLAX - Agregar al final de style.css
+   ============================================ */
+
+/* FONDO PARALLAX ANIMADO */
+.parallax-bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(36, 6, 232, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 255, 98, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(32, 109, 153, 0.06) 0%, transparent 50%);
+  animation: parallaxFloat 20s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes parallaxFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-5%, -5%) scale(1.02); }
+  66% { transform: translate(5%, 5%) scale(0.98); }
+}
+
+/* HERO PARALLAX */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.hero-image img {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+.hero-copy {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  z-index: 2;
+  position: relative;
+}
+
+/* ANIMACIÓN PARA TARJETAS MVV */
+@keyframes slideInParallax {
+  from {
+    opacity: 0;
+    transform: translateY(50px) rotateX(10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.mvv-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transform-style: preserve-3d;
+}
+
+/* CARRUSEL CON EFECTO 3D */
+.carousel-item img {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.carousel-item img:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGO FLOTANTE */
+.logo {
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+/* SECCIONES CON PROFUNDIDAD */
+.section {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+/* EFECTO DE PROFUNDIDAD EN BOTONES */
+.btn-primary {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  filter: blur(20px);
+}
+
+.btn-primary:hover::before {
+  opacity: 0.6;
+}
+
+/* PARALLAX SUAVE EN SCROLL */
+.parallax-smooth {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* OPTIMIZACIÓN PARA MÓVILES */
+@media (max-width: 768px) {
+  .parallax-bg {
+    animation: none; /* Desactiva en móvil para mejor performance */
+  }
+  
+  .hero-image img,
+  .hero-copy,
+  .carousel-item img {
+    transform: none !important; /* Desactiva parallax en móvil */
+  }
+}
+
+/* MODO DE REDUCCIÓN DE MOVIMIENTO (Accesibilidad) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .parallax-bg {
+    animation: none;
+  }
+}
+
+/* EFECTO GLASSMORPHISM PARALLAX */
+.glass-parallax {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.glass-parallax:hover {
+  transform: translateY(-5px) translateZ(20px);
 }
